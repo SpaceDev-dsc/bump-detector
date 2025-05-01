@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Bump Detector Bot</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #44d97f, #1f6b44);
+      color: #ffffff;
+      line-height: 1.8;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 40px;
+      background: rgba(0, 0, 0, 0.85);
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 20% 20%, rgba(68, 217, 127, 0.2), transparent 70%);
+      z-index: 0;
+    }
+    h1 {
+      font-size: 3.5em;
+      color: #44d97f;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    h2 {
+      font-size: 2em;
+      color: #44d97f;
+      margin: 30px 0 15px;
+      position: relative;
+      z-index: 1;
+    }
+    p {
+      font-size: 1.2em;
+      margin: 15px 0;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      transition: transform 0.3s, background 0.3s;
+      position: relative;
+      z-index: 1;
+    }
+    p:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-5px);
+    }
+    a {
+      color: #44d97f;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+    .language-toggle {
+      text-align: center;
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 1;
+    }
+    .language-toggle button {
+      background: #44d97f;
+      border: none;
+      padding: 12px 25px;
+      margin: 0 15px;
+      border-radius: 50px;
+      color: #ffffff;
+      font-size: 1.2em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    .language-toggle button:hover {
+      background: #2a8b56;
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+    .language-toggle button.active {
+      background: #1f6b44;
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    }
+    .cta-button {
+      display: inline-block;
+      background: #44d97f;
+      padding: 15px 30px;
+      margin: 20px 0;
+      border-radius: 50px;
+      font-size: 1.3em;
+      font-weight: bold;
+      color: #ffffff;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    .cta-button:hover {
+      background: #2a8b56;
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    #english, #french {
+      display: none;
+    }
+    #english.active, #french.active {
+      display: block;
+    }
+    @media (max-width: 768px) {
+      .container {
+        margin: 20px;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 2.5em;
+      }
+      h2 {
+        font-size: 1.6em;
+      }
+      p {
+        font-size: 1em;
+        padding: 10px;
+      }
+      .language-toggle button, .cta-button {
+        padding: 10px 20px;
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Bump Detector Bot</h1>
+    <div class="language-toggle">
+      <button onclick="showLanguage('english')" class="active">English</button>
+      <button onclick="showLanguage('french')">Français</button>
+    </div>
+
+    <!-- English Version -->
+    <div id="english" class="active">
+      <div class="section">
+        <h2>About Bump Detector</h2>
+        <p>Bump Detector is a powerful Discord bot designed to streamline your server’s bumping process, ensuring your community stays active and visible.</p>
+        <p>With Bump Detector, you can set up a customizable role to be pinged whenever a bump occurs (Disboard), keeping your members informed and engaged.</p>
+        <p>Our bot is built with simplicity and efficiency in mind, offering seamless integration with your Discord server without any advertising or promotional clutter.</p>
+      </div>
+      <div class="section">
+        <h2>Why Choose Bump Detector?</h2>
+        <p><strong>Effortless Notifications</strong>: Automatically detects server bumps and pings a designated role to keep your community in the loop.</p>
+        <p><strong>Customizable</strong>: Tailor the bot’s settings to fit your server’s needs, including choosing which role to ping.</p>
+        <p><strong>Privacy-Focused</strong>: We respect your privacy and do not collect personal data or engage in advertising.</p>
+      </div>
+      <div class="section">
+        <h2>Get Started</h2>
+        <p>Ready to boost your server’s activity? Add Bump Detector to your Discord server today and experience hassle-free bump notifications!</p>
+        <a href="https://discord.com/oauth2/authorize?client_id=1360884173430067240&permissions=867328&integration_type=0&scope=bot" class="cta-button" target="_blank">Add to Discord</a>
+      </div>
+      <div class="section">
+        <h2>Learn More</h2>
+        <p>Check out our <a href="tos/">Terms of Service</a> and <a href="privacy-policy/">Privacy Policy</a> to understand how we operate and protect your data.</p>
+      </div>
+      <div class="section">
+        <h2>Contact Us</h2>
+        <p>Have questions or need support? Reach out to us via Discord at <a href="https://discord.gg/tE7CxRCr7q" target="_blank">our official Discord server support</a>.</p>
+      </div>
+      <div class="section">
+        <h2>Support Us</h2>
+        <p>Do you want to support us ? Boost <a href="https://discord.gg/tE7CxRCr7q" target="_blank">our Discord support server</a> !</p>
+      </div>
+    </div>
+
+    <!-- French Version -->
+    <div id="french">
+      <div class="section">
+        <h2>À propos de Bump Detector</h2>
+        <p>Bump Detector est un bot Discord puissant conçu pour simplifier le processus de bump de votre serveur, garantissant que votre communauté reste active et visible.</p>
+        <p>Avec Bump Detector, vous pouvez configurer un rôle personnalisable à mentionner à chaque bump (Disboard), maintenant vos membres informés et engagés.</p>
+        <p>Notre bot est conçu avec simplicité et efficacité, offrant une intégration fluide avec votre serveur Discord sans publicité ni contenu promotionnel.</p>
+      </div>
+      <div class="section">
+        <h2>Pourquoi choisir Bump Detector ?</h2>
+        <p><strong>Notifications sans effort</strong> : Détecte automatiquement les bumps de serveurs et mentionne un rôle désigné pour tenir votre communauté informée.</p>
+        <p><strong>Personnalisable</strong> : Adaptez les paramètres du bot aux besoins de votre serveur, y compris le choix du rôle à mentionner.</p>
+        <p><strong>Axé sur la confidentialité</strong> : Nous respectons votre vie privée et ne collectons pas de données personnelles ni ne nous engageons dans la publicité.</p>
+      </div>
+      <div class="section">
+        <h2>Commencez dès maintenant</h2>
+        <p>Prêt à dynamiser l’activité de votre serveur ? Ajoutez Bump Detector à votre serveur Discord dès aujourd’hui et profitez de notifications de bump sans tracas !</p>
+        <a href="https://discord.com/oauth2/authorize?client_id=1360884173430067240&permissions=867328&integration_type=0&scope=bot" class="cta-button" target="_blank">Ajouter à Discord</a>
+      </div>
+      <div class="section">
+        <h2>En savoir plus</h2>
+        <p>Consultez nos <a href="tos/">Conditions d'utilisation</a> et notre <a href="privacy-policy/">Politique de confidentialité</a> pour comprendre comment nous fonctionnons et protégeons vos données.</p>
+      </div>
+      <div class="section">
+        <h2>Contactez-nous</h2>
+        <p>Vous avez des questions ou besoin d’assistance ? Contactez-nous via Discord à l’adresse <a href="https://discord.gg/tE7CxRCr7q" target="_blank">notre serveur Discord officiel</a>.</p>
+      </div>
+      <div class="section">
+        <h2>Nous soutenir</h2>
+        <p>Voulez-vous nous soutenir ? Boostez <a href="https://discord.gg/tE7CxRCr7q" target="_blank">notre serveur Discord</a> !</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showLanguage(lang) {
+      document.getElementById('english').classList.remove('active');
+      document.getElementById('french').classList.remove('active');
+      document.getElementById(lang).classList.add('active');
+
+      document.querySelectorAll('.language-toggle button').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      document.querySelector(`button[onclick="showLanguage('${lang}')"]`).classList.add('active');
+    }
+  </script>
+</body>
+</html>
