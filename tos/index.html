@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service - Bump Detector Bot</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #44d97f, #1f6b44);
+      color: #ffffff;
+      line-height: 1.8;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 40px;
+      background: rgba(0, 0, 0, 0.85);
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+    }
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 20% 20%, rgba(68, 217, 127, 0.2), transparent 70%);
+      z-index: 0;
+    }
+    h1 {
+      font-size: 3em;
+      color: #44d97f;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 1;
+    }
+    h2 {
+      font-size: 2em;
+      color: #44d97f;
+      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #44d97f;
+      position: relative;
+      z-index: 1;
+    }
+    p, li {
+      font-size: 1.2em;
+      margin: 15px 0;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      transition: transform 0.3s, background 0.3s;
+      position: relative;
+      z-index: 1;
+    }
+    p:hover, li:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-5px);
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li::before {
+      content: "★";
+      color: #44d97f;
+      margin-right: 15px;
+      font-size: 1.3em;
+    }
+    a {
+      color: #44d97f;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+    .section {
+      margin-bottom: 50px;
+    }
+    .language-toggle {
+      text-align: center;
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 1;
+    }
+    .language-toggle button {
+      background: #44d97f;
+      border: none;
+      padding: 12px 25px;
+      margin: 0 15px;
+      border-radius: 50px;
+      color: #ffffff;
+      font-size: 1.2em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    .language-toggle button:hover {
+      background: #2a8b56;
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+    .language-toggle button.active {
+      background: #1f6b44;
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    }
+    #english, #french {
+      display: none;
+    }
+    #english.active, #french.active {
+      display: block;
+    }
+    @media (max-width: 768px) {
+      .container {
+        margin: 20px;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 2.2em;
+      }
+      h2 {
+        font-size: 1.6em;
+      }
+      p, li {
+        font-size: 1em;
+        padding: 10px;
+      }
+      .language-toggle button {
+        padding: 10px 20px;
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Terms of Service - Bump Detector Bot</h1>
+    <div class="language-toggle">
+      <button onclick="showLanguage('english')" class="active">English</button>
+      <button onclick="showLanguage('french')">Français</button>
+    </div>
+
+    <!-- English Version -->
+    <div id="english" class="active">
+      <div class="section">
+        <h2>Last Updated: May 1, 2025</h2>
+        <p>By using the Bump Detector Discord Bot ("the Bot"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree with these Terms, please do not use the Bot.</p>
+      </div>
+      <div class="section">
+        <h2>1. Description of Service</h2>
+        <p>The Bump Detector Bot is a Discord bot designed to detect server bumps (Disboard bumps) and ping a customizable role within a Discord server to notify members.</p>
+        <p>The Bot does not support or engage in any form of advertising or promotional activities.</p>
+      </div>
+      <div class="section">
+        <h2>2. Usage Restrictions</h2>
+        <p><strong>No Advertising</strong>: The Bot must not be used for any advertising or promotional purposes, including but not limited to sending unsolicited messages or promoting external services, products, or servers.</p>
+        <p><strong>Custom Role Pinging</strong>: The Bot allows pinging of a customizable role for bump notifications. You are responsible for configuring the role appropriately and ensuring its use complies with Discord's <a href="https://discord.com/terms" target="_blank">Terms of Service</a> and <a href="https://discord.com/guidelines" target="_blank">Community Guidelines</a>.</p>
+        <p><strong>Compliance with Discord Policies</strong>: Users must ensure that their use of the Bot complies with Discord's Terms of Service and Community Guidelines.</p>
+      </div>
+      <div class="section">
+        <h2>3. User Responsibilities</h2>
+        <p><strong>Proper Configuration</strong>: You are responsible for correctly setting up the Bot, including the customizable role for pinging, to avoid spamming or disrupting your server.</p>
+        <p><strong>Appropriate Use</strong>: You agree to use the Bot in a manner that does not harass, annoy, or disrupt other users or servers.</p>
+        <p><strong>Server Permissions</strong>: You must have the necessary permissions within your Discord server to add and configure the Bot.</p>
+      </div>
+      <div class="section">
+        <h2>4. Prohibited Activities</h2>
+        <p>You may not:</p>
+        <p>Use the Bot to send spam or excessive pings that disrupt the server or its members.</p>
+        <p>Attempt to reverse-engineer, modify, or exploit the Bot's code or functionality.</p>
+        <p>Use the Bot for any illegal or unauthorized purpose.</p>
+        <p>Use the Bot to violate any third-party rights or applicable laws.</p>
+      </div>
+      <div class="section">
+        <h2>5. Limitation of Liability</h2>
+        <p>The Bot is provided "as is" without warranties of any kind, express or implied.</p>
+        <p>The developers of the Bot are not liable for any damages, including but not limited to, direct, indirect, incidental, or consequential damages arising from the use or inability to use the Bot.</p>
+        <p>The developers are not responsible for any disruptions caused by improper configuration or misuse of the Bot.</p>
+      </div>
+      <div class="section">
+        <h2>6. Termination</h2>
+        <p>The developers reserve the right to suspend or terminate the Bot’s services at any time without notice.</p>
+        <p>You may stop using the Bot at any time by removing it from your Discord server.</p>
+      </div>
+      <div class="section">
+        <h2>7. Modifications to the Terms</h2>
+        <p>We may update these Terms at any time by posting the revised version on our website or within the Bot’s documentation. Continued use of the Bot after changes constitutes acceptance of the new Terms.</p>
+      </div>
+      <div class="section">
+        <h2>8. Contact</h2>
+        <p>For questions or concerns about these Terms or the Bot, please contact the developers via Discord at <a href="https://discord.com/users/1313829582066941976" target="_blank">our official Discord contact</a>.</p>
+      </div>
+      <p>By using the Bump Detector Bot, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.</p>
+    </div>
+
+    <!-- French Version -->
+    <div id="french">
+      <div class="section">
+        <h2>Dernière mise à jour : 1er mai 2025</h2>
+        <p>En utilisant le bot Discord Bump Detector (« le Bot »), vous acceptez d'être lié par ces Conditions d'utilisation (« Conditions »). Si vous n'acceptez pas ces Conditions, veuillez ne pas utiliser le Bot.</p>
+      </div>
+      <div class="section">
+        <h2>1. Description du service</h2>
+        <p>Le Bump Detector est un bot Discord conçu pour détecter les bumps de serveurs (bumps Disboard) et envoyer une notification en mentionnant un rôle personnalisable dans un serveur Discord.</p>
+        <p>Le Bot n'a pas pour vocation de réaliser ou de participer à des activités publicitaires ou promotionnelles.</p>
+      </div>
+      <div class="section">
+        <h2>2. Restrictions d'utilisation</h2>
+        <p><strong>Interdiction de publicité</strong> : Le Bot ne doit pas être utilisé à des fins publicitaires ou promotionnelles, y compris, mais sans s'y limiter, l'envoi de messages non sollicités ou la promotion de services, produits ou serveurs externes.</p>
+        <p><strong>Mention d’un rôle personnalisé</strong> : Le Bot permet de mentionner un rôle personnalisable pour les notifications de bump. Vous êtes responsable de la configuration appropriée de ce rôle et de son utilisation en conformité avec les <a href="https://discord.com/terms" target="_blank">Conditions d'utilisation</a> et les <a href="https://discord.com/guidelines" target="_blank">Directives communautaires</a> de Discord.</p>
+        <p><strong>Conformité aux politiques de Discord</strong> : Les utilisateurs doivent s'assurer que l'utilisation du Bot respecte les Conditions d'utilisation et les Directives communautaires de Discord.</p>
+      </div>
+      <div class="section">
+        <h2>3. Responsabilités de l'utilisateur</h2>
+        <p><strong>Configuration appropriée</strong> : Vous êtes responsable de la configuration correcte du Bot, y compris le rôle personnalisé pour les mentions, afin d'éviter tout spam ou perturbation dans votre serveur.</p>
+        <p><strong>Utilisation appropriée</strong> : Vous vous engagez à utiliser le Bot de manière à ne pas harceler, ennuyer ou perturber les autres utilisateurs ou serveurs.</p>
+        <p><strong>Permissions du serveur</strong> : Vous devez disposer des autorisations nécessaires au sein de votre serveur Discord pour ajouter et configurer le Bot.</p>
+      </div>
+      <div class="section">
+        <h2>4. Activités interdites</h2>
+        <p>Vous ne devez pas :</p>
+        <p>Utiliser le Bot pour envoyer du spam ou des mentions excessives perturbant le serveur ou ses membres.</p>
+        <p>Tenter de désosser, modifier ou exploiter le code ou les fonctionnalités du Bot.</p>
+        <p>Utiliser le Bot à des fins illégales ou non autorisées.</p>
+        <p>Utiliser le Bot pour violer les droits de tiers ou les lois applicables.</p>
+      </div>
+      <div class="section">
+        <h2>5. Limitation de responsabilité</h2>
+        <p>Le Bot est fourni « tel quel » sans garantie d'aucune sorte, expresse ou implicite.</p>
+        <p>Les développeurs du Bot ne sont pas responsables des dommages, y compris, mais sans s'y limiter, les dommages directs, indirects, accessoires ou consécutifs découlant de l'utilisation ou de l'incapacité à utiliser le Bot.</p>
+        <p>Les développeurs ne sont pas responsables des perturbations causées par une mauvaise configuration ou une mauvaise utilisation du Bot.</p>
+      </div>
+      <div class="section">
+        <h2>6. Résiliation</h2>
+        <p>Les développeurs se réservent le droit de suspendre ou de mettre fin aux services du Bot à tout moment sans préavis.</p>
+        <p>Vous pouvez cesser d'utiliser le Bot à tout moment en le supprimant de votre serveur Discord.</p>
+      </div>
+      <div class="section">
+        <h2>7. Modifications des Conditions</h2>
+        <p>Nous pouvons mettre à jour ces Conditions à tout moment en publiant la version révisée sur notre site web ou dans la documentation du Bot. L'utilisation continue du Bot après ces modifications constitue une acceptation des nouvelles Conditions.</p>
+      </div>
+      <div class="section">
+        <h2>8. Contact</h2>
+        <p>Pour toute question ou préoccupation concernant ces Conditions ou le Bot, veuillez contacter les développeurs via Discord à l'adresse <a href="https://discord.com/users/1313829582066941976" target="_blank">notre contact officiel Discord</a>.</p>
+      </div>
+      <p>En utilisant le Bump Detector Bot, vous reconnaissez avoir lu, compris et accepté d'être lié par ces Conditions d'utilisation.</p>
+    </div>
+  </div>
+
+  <script>
+    function showLanguage(lang) {
+      document.getElementById('english').classList.remove('active');
+      document.getElementById('french').classList.remove('active');
+      document.getElementById(lang).classList.add('active');
+
+      document.querySelectorAll('.language-toggle button').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      document.querySelector(`button[onclick="showLanguage('${lang}')"]`).classList.add('active');
+    }
+  </script>
+</body>
+</html>
